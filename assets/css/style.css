@@ -357,7 +357,7 @@ a:focus{
 	background-color:transparent;
 	border-color:transparent;
 }
-.navbar-default .navbar-nav>.active>a:after{
+/*.navbar-default .navbar-nav>.active>a:after{
 	content:"\2192";
 	display:inline-block;
 	font-style:normal;
@@ -372,12 +372,21 @@ a:focus{
 	    -ms-transition:all .25s;
 	     -o-transition:all .25s;
 	        transition:all .25s;
+}*/
+.navbar-default .navbar-nav>.active>a{
+	border-left: 5px solid white;
+
+	-webkit-transition:all .25s;
+		-moz-transition:all .25s;
+			-ms-transition:all .25s;
+			-o-transition:all .25s;
+					transition:all .25s;
 }
 .navbar-nav>li>a{
 	padding:5px 15px;
 	font-weight:400;
-	font-style:italic;
-
+	/*font-style:italic;*/
+	text-transform: uppercase;
 	-webkit-transition:all .25s;
 	   -moz-transition:all .25s;
 	    -ms-transition:all .25s;
