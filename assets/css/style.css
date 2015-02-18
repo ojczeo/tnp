@@ -475,31 +475,6 @@ a:focus{
 	background-color: #3498db;
 }
 
-
-.site-title{
-	text-align:center;
-	font-size:66px;
-	font-family:'Pacifico';
-	margin:0 0 50px 0;
-	padding-bottom:50px;
-	position:relative;
-}
-.site-title:before,
-.site-title:after{
-	content:"";
-	width:100px;
-	height:10px;
-	left:50%;
-	margin-left:-50px;
-	border-bottom:1px double #fff;
-	position:absolute;
-}
-.site-title:before{
-	bottom:0;
-}
-.site-title:after{
-	bottom:2px;
-}
 #page-top .section-name span:before,
 #page-top .section-name span:after{
 	content:none;
