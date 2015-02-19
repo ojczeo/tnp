@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>	Kite Coming Soon HTML Template</title>
-	<meta name="description" content="Kite Coming Soon HTML Template by Jewel Theme" >
-	<meta name="author" content="Jewel Theme">
+	<title>Twelve Notes Productions</title>
+	<meta name="description" content="Twelve Notes Productions. Music for movies, TV, commercials and video games. Music composers, sound designers team." >
+	<meta name="author" content="Twelve Notes Productions - music for movies, TV, commercials and video games.">
 
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,15 @@
 
 	<!-- Custom Styles -->
 	<link href="assets/css/style.css" rel="stylesheet">
-
+	<!-- jQuery Library -->
+	<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
+	<!-- Modernizr js -->
+	<script type="text/javascript" src="assets/js/modernizr-2.8.0.min.js"></script>
+	<!-- Plugins -->
+	<script type="text/javascript" src="assets/js/plugins.js"></script>
+	<!-- Custom JavaScript Functions -->
+	<script type="text/javascript" src="assets/js/functions.js"></script>
+	
 	<!--[if lt IE 9]>
 	<script src="assets/js/html5shiv.js"></script>
 	<![endif]-->
@@ -59,7 +67,7 @@
 			<ul id="headernavigation" class="nav navbar-nav">
 				<li class="active"><a href="#page-top">Home</a></li>
 				<li><a href="#about">About</a></li>
-				<li><a href="#subscribe">Subscribe</a></li>
+				<li><a href="#music">music</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul> <!-- /.nav .navbar-nav -->
 		</nav> <!-- /.navbar-collapse  -->
@@ -70,91 +78,18 @@
 	<!-- Page Top Section -->
 	<section id="page-top" class="section-style" data-background-image="">
 		<div class="pattern height-resize">
-			<div class="container">
-				<h1 class="site-title">
+			<div class="centerize">
+				<h1 class="logo-wrapper">
 					<img src="assets/images/logo.png">
 				</h1>
-				<!-- <h1 class="site-title">
-					Kite
-				</h1>
-				<h3 class="section-name">
-					<span>
-						We Are
-					</span>
-				</h3>
-				<h2 class="section-title">
-					Coming Soon
-				</h2>
-				<div id="time_countdown" class="time-count-container">
-
-					<div class="col-sm-3">
-						<div class="time-box">
-							<div class="time-box-inner dash days_dash animated" data-animation="rollIn" data-animation-delay="300">
-								<span class="time-number">
-									<span class="digit">0</span>
-									<span class="digit">0</span>
-									<span class="digit">0</span>
-								</span>
-								<span class="time-name">Days</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="time-box">
-							<div class="time-box-inner dash hours_dash animated" data-animation="rollIn" data-animation-delay="600">
-								<span class="time-number">
-									<span class="digit">0</span>
-									<span class="digit">0</span>
-								</span>
-								<span class="time-name">Hours</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="time-box">
-							<div class="time-box-inner dash minutes_dash animated" data-animation="rollIn" data-animation-delay="900">
-								<span class="time-number">
-									<span class="digit">0</span>
-									<span class="digit">0</span>
-								</span>
-								<span class="time-name">Minutes</span>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-sm-3">
-						<div class="time-box">
-							<div class="time-box-inner dash seconds_dash animated" data-animation="rollIn" data-animation-delay="1200">
-								<span class="time-number">
-									<span class="digit">0</span>
-									<span class="digit">0</span>
-								</span>
-								<span class="time-name">Seconds</span>
-							</div>
-						</div>
-					</div>
-
-				</div><!-- /.time-count-container --> -->
-
-				<!-- <p class="time-until">
-					<span>Time Until Launce</span>
-				</p><!-- /.time-until --> -->
-
-
-
-
-
 
 				<div class="next-section">
 					<a class="go-to-about"><span></span></a>
-				</div><!-- /.next-section -->
+				</div>
 
-			</div><!-- /.container -->
-		</div><!-- /.pattern -->
-	</section><!-- /#page-top -->
-	<!-- Page Top Section  End -->
+			</div>
+		</div>
+	</section>
 
 
 	<!-- About Us Section -->
@@ -167,10 +102,10 @@
 					</span>
 				</h3><!-- /.section-name -->
 				<h2 class="section-title">
-					We Are dedicated
+					we are creators
 				</h2><!-- /.Section-title  -->
 				<p class="section-description">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+					We are a team of passionates, each of us is a professional in another field. Together we create unusual music.
 				</p><!-- /.section-description -->
 
 				<div class="team-container">
@@ -178,7 +113,7 @@
 						<div class="col-sm-4">
 							<div class="team-member">
 								<figure>
-									<img src="images/team/team-member-1.jpg" alt="Team Member">
+									<img src="images/team/team-placeholder.jpg" alt="Andrzej Ojczenasz" class='team-member'>
 									<figcaption>
 										<p class="member-name">Andrzej Ojczenasz</p>
 										<p class="designation">
@@ -189,25 +124,25 @@
 								</figure>
 								<div class="social-btn-container">
 									<div class="team-socail-btn">
-										<span class="social-btn-box facebook-btn-container">
+										<!-- <span class="social-btn-box facebook-btn-container">
 											<a href="#" class="facebook-btn">
 												<i class="fa fa-facebook"></i>
 											</a><!-- /.facebook-btn -->
 										</span><!-- /.social-btn-box -->
 
-										<span class="social-btn-box twitter-btn-container">
+										<!-- <span class="social-btn-box twitter-btn-container">
 											<a href="#" class="twitter-btn">
 												<i class="fa fa-twitter"></i>
 											</a><!-- /.twitter-btn -->
-										</span><!-- /.social-btn-box -->
+										</span>
 
 										<span class="social-btn-box linkedin-btn-container">
-											<a href="#" class="linkedin-btn">
+											<a href="http://linkedin.com/pub/andrzej-ojczenasz/58/403/865/" class="linkedin-btn" target="_blank">
 												<i class="fa fa-linkedin"></i>
 											</a><!-- /.linkedin-btn -->
 										</span><!-- /.social-btn-box -->
 
-										<span class="social-btn-box github-btn-container">
+										<!-- <span class="social-btn-box github-btn-container">
 											<a href="#" class="github-btn">
 												<i class="fa fa-github-alt"></i>
 											</a><!-- /.github-btn -->
@@ -221,7 +156,7 @@
 						<div class="col-sm-4">
 							<div class="team-member">
 								<figure>
-									<!-- <img src="images/team/team-member-2.jpg" alt="Team Member"> -->
+									<img src="images/team/team-placeholder.jpg" alt="Mateusz Kucharski" class='team-member'>
 									<figcaption>
 										<p class="member-name">
 											Mateusz Kucharski
@@ -266,7 +201,7 @@
 						<div class="col-sm-4">
 							<div class="team-member">
 								<figure>
-									<img src="images/team/team-member-3.jpg" alt="Team Member">
+									<img src="images/team/team-placeholder.jpg" alt="Piotrek Lenarcik" class='team-member'>
 									<figcaption>
 										<p class="member-name">
 											Piotrek Lenarcik
@@ -311,7 +246,7 @@
 				</div><!-- /.team-container -->
 
 				<div class="next-section">
-					<a class="go-to-subscribe"><span></span></a>
+					<a class="go-to-music"><span></span></a>
 				</div><!-- /.next-section -->
 
 			</div><!-- /.container -->
@@ -323,52 +258,49 @@
 
 
 
-	<!-- Subscribe Section -->
-	<section id="subscribe" class="section-style" data-background-image="">
+	<!-- music Section -->
+	<section id="music" class="section-style" data-background-image="">
 		<div class="pattern height-resize">
 			<div class="container">
 				<h3 class="section-name">
 					<span>
-						Subscribe
+						Our music
 					</span>
 				</h3><!-- /.section-name -->
 				<h2 class="section-title">
-					Our Newsletter
+					Listen below
 				</h2><!-- /.Section-title  -->
+
 				<p class="section-description">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+					<!-- Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. -->
 				</p><!-- /.section-description -->
 
-				<form class="news-letter" action="php/subscribe.php" method="post">
-					<div class="subscribe-hide">
-						<input class="form-control" type="email" id="subscribe-email" name="subscribe-email" placeholder="Email Address"  required>
-						<button  type="submit" id="subscribe-submit" class="btn"><i class="fa fa-envelope"></i></button>
-						<span id="subscribe-loading" class="btn"> <i class="fa fa-refresh fa-spin"></i> </span>
-						<div class="subscribe-error"></div>
-					</div><!-- /.subscribe-hide -->
-					<div class="subscribe-message"></div>
-				</form><!-- /.news-letter -->
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/55121015&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 
 				<div class="social-btn-container">
 					<span class="social-btn-box">
-						<a href="#" class="facebook-btn">
+						<a href="https://www.facebook.com/twelvenotesproductions" class="facebook-btn" target="_blank">
 						<i class="fa fa-facebook"></i></a>
 					</span><!-- /.social-btn-box -->
 
-					<span class="social-btn-box">
+					<!--<span class="social-btn-box">
 						<a href="#" class="twitter-btn"><i class="fa fa-twitter"></i></a>
 					</span><!-- /.social-btn-box -->
 
 					<span class="social-btn-box">
-						<a href="#" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
+						<a href="https://www.linkedin.com/company/twelve-notes-productions" target="_blank" class="linkedin-btn"><i class="fa fa-linkedin"></i></a>
 					</span><!-- /.social-btn-box -->
 
 					<span class="social-btn-box">
+						<a href="https://soundcloud.com/twelve-notes-productions/" class="soundcloud-btn" target="_blank"><i class="fa fa-soundcloud"></i></a>
+					</span><!-- /.social-btn-box -->
+
+					<!-- <span class="social-btn-box">
 						<a href="#" class="google-plus-btn"><i class="fa fa-google-plus"></i></a>
 					</span><!-- /.social-btn-box -->
 
 
-					<span class="social-btn-box">
+					<!-- <span class="social-btn-box">
 						<a href="#" class="youtube-btn"><i class="fa fa-youtube"></i></a>
 					</span><!-- /.social-btn-box -->
 
@@ -381,8 +313,8 @@
 			</div><!-- /.container -->
 		</div><!-- /.pattern -->
 
-	</section><!-- /#subscribe -->
-	<!-- Subscribe Section End -->
+	</section><!-- /#music -->
+	<!-- music Section End -->
 
 
 
@@ -399,7 +331,7 @@
 					Get in Touch
 				</h2><!-- /.Section-title  -->
 				<p class="section-description">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+					<!-- Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. -->
 				</p><!-- /.section-description -->
 
 				<form id="contact-form" action="#" method="post" class="clearfix">
@@ -425,7 +357,7 @@
 							<span class="contact-message-error"></span>
 						</div>
 						<div class="col-sm-2">
-							<button id="contact-submit" class="btn custom-btn col-xs-12" type="submit" name="submit"><i class="fa fa-rocket"></i></button>
+							<button id="contact-submit" class="btn custom-btn col-xs-12" type="submit" name="submit"><i class="fa fa-play"></i></button>
 							<span id="contact-loading" class="btn custom-btn col-xs-12"> <i class="fa fa-refresh fa-spin"></i> </span>
 						</div>
 					</div><!-- /.contact-box-hide -->
@@ -454,14 +386,5 @@
 		</p>
 	</footer>
 	<!-- Footer Section End -->
-
-	<!-- jQuery Library -->
-	<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
-	<!-- Modernizr js -->
-	<script type="text/javascript" src="assets/js/modernizr-2.8.0.min.js"></script>
-	<!-- Plugins -->
-	<script type="text/javascript" src="assets/js/plugins.js"></script>
-	<!-- Custom JavaScript Functions -->
-	<script type="text/javascript" src="assets/js/functions.js"></script>
 </body>
 </html>

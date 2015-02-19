@@ -3,12 +3,12 @@
 -------------------------------------------------------------------*/
 var  pageTopImage = jQuery('#page-top').data('background-image');
 var  aboutImage = jQuery('#about').data('background-image');
-var  subscribeImage = jQuery('#subscribe').data('background-image');
+var  musicImage = jQuery('#music').data('background-image');
 var  contactImage = jQuery('#contact').data('background-image');
 
 if (pageTopImage) {  jQuery('#page-top').css({ 'background-image':'url(' + pageTopImage + ')' }); };
 if (aboutImage) {  jQuery('#about').css({ 'background-image':'url(' + aboutImage + ')' }); };
-if (subscribeImage) {  jQuery('#subscribe').css({ 'background-image':'url(' + subscribeImage + ')' }); };
+if (musicImage) {  jQuery('#music').css({ 'background-image':'url(' + musicImage + ')' }); };
 if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contactImage + ')' }); };
 
 /* Background Images End
@@ -34,8 +34,8 @@ jQuery(document).ready(function($) {
     -------------------------------------------------------------------*/
 
 
-    
-	/* Main Menu   
+
+	/* Main Menu
 	-------------------------------------------------------------------*/
 	$('#main-menu #headernavigation').onePageNav({
 		currentClass: 'active',
@@ -45,39 +45,39 @@ jQuery(document).ready(function($) {
 		scrollOffset: 0,
 		filter: '',
 		easing: 'swing'
-	});  
+	});
 
-	/* Main Menu End  
+	/* Main Menu End
 	-------------------------------------------------------------------*/
 
 
 
 
-	/* Time Countdown 
+	/* Time Countdown
 	-------------------------------------------------------------------*/
-	$('#time_countdown').countDown({
-        
-        // targetDate: {
-        //     'day': 30,
-        //     'month': 9,
-        //     'year': 2015,
-        //     'hour': 0,
-        //     'min': 0,
-        //     'sec': 0
-        // },
-        // omitWeeks: true
-
-         targetOffset: {
-            'day':      0,
-            'month':    0,
-            'year':     1,
-            'hour':     0,
-            'min':      0,
-            'sec':      3
-		},
-		omitWeeks: true
-
-	    });
+	// $('#time_countdown').countDown({
+	//
+  //       // targetDate: {
+  //       //     'day': 30,
+  //       //     'month': 9,
+  //       //     'year': 2015,
+  //       //     'hour': 0,
+  //       //     'min': 0,
+  //       //     'sec': 0
+  //       // },
+  //       // omitWeeks: true
+	//
+  //        targetOffset: {
+  //           'day':      0,
+  //           'month':    0,
+  //           'year':     1,
+  //           'hour':     0,
+  //           'min':      0,
+  //           'sec':      3
+	// 	},
+	// 	omitWeeks: true
+	//
+	//     });
 
 
     /* Time Countdown End
@@ -86,13 +86,14 @@ jQuery(document).ready(function($) {
 
 
 
-	/* Next Section   
+	/* Next Section
 	-------------------------------------------------------------------*/
-	$('.next-section .go-to-about').click(function() {
+	$('.next-section .go-to-about').click(function(e, t) {
+	console.log(e, t);
     	$('html,body').animate({scrollTop:$('#about').offset().top}, 1000);
   	});
-  	$('.next-section .go-to-subscribe').click(function() {
-    	$('html,body').animate({scrollTop:$('#subscribe').offset().top}, 1000);
+  	$('.next-section .go-to-music').click(function() {
+    	$('html,body').animate({scrollTop:$('#music').offset().top}, 1000);
   	});
   	$('.next-section .go-to-contact').click(function() {
     	$('html,body').animate({scrollTop:$('#contact').offset().top}, 1000);
@@ -107,58 +108,61 @@ jQuery(document).ready(function($) {
 
 
 
-	/* Subscribe
-	-------------------------------------------------------------------*/
-
-    $('#subscribe-submit').click(function () {
-        $('.subscribe-error').hide();
-
-        var emailReg = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-        var emailVal = $('#subscribe-email').val();
-
-        if (emailVal == "" || emailVal == "Email Address *") {
-            $('.subscribe-error').html('<i class="fa fa-exclamation"></i> Email address required.').fadeIn();
-            return false;
-
-        } else if (!emailReg.test(emailVal)) {
-            $('.subscribe-error').html('<i class="fa fa-exclamation"></i> Invalid email address.').fadeIn();
-            return false;
-        }
-
-        var data_string = $('.news-letter').serialize();
-
-        $('#subscribe-submit').hide();
-        $('#subscribe-loading').fadeIn();
-        $('.subscribe-error').fadeOut();
-
-        $.ajax({
-            type: "POST",
-            url: "php/subscribe.php",
-            data: data_string,
-
-            //success
-            success: function (data) {
-                $('.subscribe-hide').hide();
-                $('.subscribe-message').html('<i class="fa fa-check contact-success"></i><div>Thank you! You have been subscribed.<div>').fadeIn();
-            },
-            error: function (data) {
-                $('.subscribe-hide').hide();
-                $('.subscribe-message').html('<i class="fa fa-exclamation contact-error"></i><div>Something went wrong, please try again later.<div>').fadeIn();
-            }
-
-        }) //end ajax call
-        return false;
-    });
-
-	/* Subscribe End
-	-------------------------------------------------------------------*/
+	// /* music
+	// -------------------------------------------------------------------*/
+	//
+  //   $('#music-submit').click(function () {
+  //       $('.music-error').hide();
+	//
+  //       var emailReg = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+  //       var emailVal = $('#music-email').val();
+	//
+  //       if (emailVal == "" || emailVal == "Email Address *") {
+  //           $('.music-error').html('<i class="fa fa-exclamation"></i> Email address required.').fadeIn();
+  //           return false;
+	//
+  //       } else if (!emailReg.test(emailVal)) {
+  //           $('.music-error').html('<i class="fa fa-exclamation"></i> Invalid email address.').fadeIn();
+  //           return false;
+  //       }
+	//
+  //       var data_string = $('.news-letter').serialize();
+	//
+  //       $('#music-submit').hide();
+  //       $('#music-loading').fadeIn();
+  //       $('.music-error').fadeOut();
+	//
+  //       $.ajax({
+  //           type: "POST",
+  //           url: "php/music.php",
+  //           data: data_string,
+	//
+  //           //success
+  //           success: function (data) {
+  //               $('.music-hide').hide();
+  //               $('.music-message').html('<i class="fa fa-check contact-success"></i><div>Thank you! You have been musicd.<div>').fadeIn();
+  //           },
+  //           error: function (data) {
+  //               $('.music-hide').hide();
+  //               $('.music-message').html('<i class="fa fa-exclamation contact-error"></i><div>Something went wrong, please try again later.<div>').fadeIn();
+  //           }
+	//
+  //       }) //end ajax call
+  //       return false;
+  //   });
+	//
+	// /* music End
+	// -------------------------------------------------------------------*/
 
 
 
 
 	/* Contact
 	-------------------------------------------------------------------*/
-    $('#contact-submit').click(function () {
+		$('#contact-form').submit(function (e) {
+			e.preventDefault();
+		});
+		$('#contact-submit').click(function (e) {
         $('.first-name-error, .last-name-error, .contact-email-error, .contact-subject-error, .contact-message-error').hide();
         var first_nameVal = $('input[name=first_name]').val();
         var last_nameVal = $('input[name=last_name]').val();
@@ -227,9 +231,9 @@ jQuery(document).ready(function($) {
 	-------------------------------------------------------------------*/
 
 
-    
 
-    
+
+
 
 
 
@@ -239,13 +243,12 @@ jQuery(document).ready(function($) {
 -------------------------------------------------------------------*/
 
 
-/* Preloder 
+/* Preloder
 -------------------------------------------------------------------*/
-$(window).load(function () {    
+$(window).load(function () {
     "use strict";
     $("#loader").fadeOut();
     $("#preloader").delay(350).fadeOut("slow");
 });
  /* Preloder End
 -------------------------------------------------------------------*/
-   

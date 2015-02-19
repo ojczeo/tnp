@@ -25,7 +25,7 @@ Tags: HTML, Template, Coming Soon, Kite
 *  3 - Main Menu
 *  4 - Page Top Section
 *  5 - About Us Section
-*  6 - Subscribe Section
+*  6 - music Section
 *  7 - Contact Section
 *  8 - Footer Section
 *  9 - Media Query
@@ -56,6 +56,11 @@ body{
 	color:#fff;
 	-webkit-font-smoothing:antialiased;
 	-moz-osx-font-smoothing:grayscale;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
 }
 
 a{
@@ -67,15 +72,27 @@ a:focus{
 }
 .section-style{
 	background-attachment:inherit;
-	background-position:50% 0;
+	background-position: center center;
 	background-repeat:no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	margin:0 auto;
 	width:100%;
 	background-size:cover;
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
 }
 .pattern{
-	/*background:rgba(0,0,0,.5) url(../images/pattern.png);*/
+	background:rgba(0,0,0,.4) url(../images/pattern.png);
 	padding-top:100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 .container{
 	overflow:hidden;
@@ -91,14 +108,13 @@ a:focus{
 	position:relative;
 	padding-bottom:15px;
 }
-.section-name span:before,
 .section-name span:after{
 	content:"";
-	width:100%;
 	height:10px;
-	border-bottom:1px double #fff;
+	border-bottom:2px solid #fff;
 	position:absolute;
 	left:0;
+	right:0;
 }
 .section-name span:before{
 	bottom:0;
@@ -156,12 +172,23 @@ a:focus{
 ------------------------------------------ */
 .next-section{
 	text-align:center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
 .next-section a{
+	-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			-o-transform:rotate(45deg);
+					transform:rotate(45deg);
 	cursor:pointer;
 	display:inline-block;
 	width:120px;
 	height:120px;
+
+
 	/*
 	-webkit-border-radius:100%;
 	   -moz-border-radius:100%;
@@ -169,11 +196,17 @@ a:focus{
 	     -o-border-radius:100%;
 	        border-radius:100%;*/
 
-	background-color:rgba(0,0,0,.2);
-	box-shadow: 0 0 1px rgba(255,255,255,.2);
+	/*background-color:rgba(0,0,0,.2);
+	box-shadow: 0 0 1px rgba(255,255,255,.2);*/
 	margin:70px;
-	padding-top:45px;
 	position:relative;
+	border: 1px solid white;
+	border-color: transparent;
+	-webkit-transition:all .25s;
+		-moz-transition:all .25s;
+			-ms-transition:all .25s;
+			-o-transition:all .25s;
+					transition:all .25s;
 }
 
 .next-section a span{
@@ -184,16 +217,16 @@ a:focus{
 	border-left-color:transparent;
 	border-top-color:transparent;
 	position:absolute;
-	top:20px;
-	left:35px;
+	top:34px;
+	left:34px;
 
-	-webkit-transform:rotate(45deg);
+	/*-webkit-transform:rotate(45deg);
 	   -moz-transform:rotate(45deg);
 	    -ms-transform:rotate(45deg);
 	     -o-transform:rotate(45deg);
-	        transform:rotate(45deg);
+	        transform:rotate(45deg);*/
 
-	opacity:.4;
+
 
 	-webkit-transition:all .25s;
 	   -moz-transition:all .25s;
@@ -201,13 +234,31 @@ a:focus{
 	     -o-transition:all .25s;
 	        transition:all .25s;
 }
-.next-section a:hover span{
-	opacity:1;
+.next-section a:hover {
+	border-bottom-color: white;
+	border-right-color: white;
 }
+.next-section a.go-to-page-top {
+	-webkit-transform:rotate(45deg);
+		-moz-transform:rotate(45deg);
+			-ms-transform:rotate(45deg);
+			-o-transform:rotate(45deg);
+					transform:rotate(45deg);
+}
+
 /* 2.1 - Next Section
 ------------------------------------------ */
 
-
+.centerize {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.centerize .logo-wrapper {
+	vertical-align: middle;
+	text-align: center;
+	display: table-cell;
+}
 
 /* 2.2 - Social Button
 ------------------------------------------ */
@@ -275,6 +326,11 @@ a:focus{
 	background:#55ACEE;
 	color: #fff;
 }
+.social-btn-box .soundcloud-btn:hover{
+	color: white;
+	background:#CC4400;
+}
+
 .social-btn-box .linkedin-btn:hover{
 	background:#0077b5;
 	color: #fff;
@@ -339,8 +395,14 @@ a:focus{
 /* 2 - Global Style End
 ---------------------------------------------------------------------- */
 
+h1.logo-wrapper img {
+	max-width: 100%;
+}
 
-
+.team-member {
+	max-width: 100%;
+	max-height: 100%;
+}
 
 /* 3 - Main Menu
 ---------------------------------------------------------------------- */
@@ -452,6 +514,11 @@ a:focus{
 	}
 }
 @media screen and (min-width: 992px){
+	.navbar-collapse{
+		position: fixed;
+		top: 35%;
+		left: 0;
+	}
 	.navbar-fixed-top{
 		top:100px;
 		z-index:9999;
@@ -461,6 +528,10 @@ a:focus{
 	}
 	.navbar-nav>li{
 		float:none !important;
+	}
+	.navbar-nav>li>a {
+		letter-spacing: 4px;
+		line-height: 40px;
 	}
 }
 /* 3 - Main Menu End
@@ -472,7 +543,12 @@ a:focus{
 /* 4 - Page Top Section
 ---------------------------------------------------------------------- */
 #page-top{
-	background-color: #3498db;
+	background-color: #1D3D5B;
+	background-image: url('../images/1.jpg');
+	/*background-color: #3498db;*/
+}
+#page-top .pattern {
+	padding: 0;
 }
 
 #page-top .section-name span:before,
@@ -559,7 +635,9 @@ a:focus{
 /* 5 - About Us Section
 ---------------------------------------------------------------------- */
 #about{
-	background-color: #e74c3c;
+	/*background-color: #e74c3c;*/
+	background-color: #BA783B;
+	background-image: url('../images/2.jpg');
 }
 .team-container .col-sm-4{
 	padding:60px 15px 0 15px;
@@ -624,7 +702,7 @@ a:focus{
 	overflow: hidden;
 	position: relative;
 	width:245px;
-	height: 230px;
+	height: 245px;
 }
 .team-member .social-btn-container .social-btn-box{
 	position: absolute;
@@ -683,11 +761,11 @@ a:focus{
 	        transition:all .25s;
 }
 .team-container .team-member:hover figure{
-	background-color:#3498db;
+	background-color:#1D3D5B;
 	color:#fff;
 }
 .team-container .team-member:hover figcaption{
-	border-color:#3498db;
+	border-color:#1D3D5B;
 	color:#fff;
 }
 
@@ -700,12 +778,19 @@ a:focus{
 
 
 
-/* 6 - Subscribe Section
+/* 6 - music Section
 ---------------------------------------------------------------------- */
-#subscribe{
-	background-color: #9b59b6;
+#music{
+	/*background-color: #9b59b6;*/
+	background-color: #973031;
+	background-image: url('../images/3.jpg');
 }
-
+#music .pattern {
+	position: static;
+}
+#music .next-section{
+	position: static;
+}
 form.news-letter{
 	max-width:550px;
 	margin:auto;
@@ -730,20 +815,20 @@ form.news-letter .btn{
 form.news-letter .btn:hover{
 	color:#3498db;
 }
-#subscribe-loading {
+#music-loading {
 	display: none;
 	line-height: 45px;
 	cursor: inherit;
 }
-#subscribe-loading:hover{
+#music-loading:hover{
 	color: inherit;
 }
-.subscribe-message{
+.music-message{
 	text-align: center;
 	font-size: 1.125em;
 }
 
-.subscribe-error{
+.music-error{
 	color: #ffffff;
 	position: absolute;
 	background: rgba(52, 152, 219,1);
@@ -753,7 +838,7 @@ form.news-letter .btn:hover{
 	padding: 5px 10px;
 	border-radius: 3px;
 }
-.subscribe-error:after{
+.music-error:after{
 	position: absolute;
 	content: "";
 	width: 0;
@@ -764,7 +849,7 @@ form.news-letter .btn:hover{
 	left: 25px;
 	bottom: -24px;
 }
-/* 6 - Subscribe Section End
+/* 6 - music Section End
 ---------------------------------------------------------------------- */
 
 
@@ -773,15 +858,17 @@ form.news-letter .btn:hover{
 /* 7 - Contact Section
 ---------------------------------------------------------------------- */
 #contact{
-	background-color: #2ecc71;
+	/*background-color: #2ecc71;*/
+	background-color: #D29F70;
+	background-image: url('../images/4.jpg');
 }
 #contact .next-section a{
-
-	-webkit-transform:rotate(180deg);
-	   -moz-transform:rotate(180deg);
-	    -ms-transform:rotate(180deg);
-	     -o-transform:rotate(180deg);
-	        transform:rotate(180deg);
+	margin: 0;
+	-webkit-transform:rotate(225deg);
+	   -moz-transform:rotate(225deg);
+	    -ms-transform:rotate(225deg);
+	     -o-transform:rotate(225deg);
+	        transform:rotate(225deg);
 }
 #contact-form .col-sm-6,
 #contact-form .col-sm-10,
@@ -809,6 +896,7 @@ form.news-letter .btn:hover{
 	height:130px;
 	border-top:0px solid transparent;
 	padding-top: 20px;
+	resize: none;
 }
 #contact-form  .btn{
 	font-size:50px;
@@ -818,7 +906,8 @@ form.news-letter .btn:hover{
 	border-top:0px solid transparent;
 }
 #contact-form  .btn:hover{
-	color:#3498db;
+	background-color: white;
+	color: #1D3D5B;
 }
 #contact-form  .col-sm-6,
 #contact-form  .col-sm-10{
@@ -878,16 +967,19 @@ form.news-letter .btn:hover{
 #footer-section{
 	width: 100%;
 	min-height: 80px;
+	color: black;
+	background-color: white;
+	text-transform: uppercase;
+	letter-spacing: 5px;
 }
 #footer-section p{
 	margin: 0;
 	padding: 25px 15px;
 	text-align: center;
 	line-height: 30px;
-	color: #1a1a1a;
 }
 #footer-section p a{
-	color: #3498db;
+	color: #1D3D5B;
 }
 /* 8 - Footer Section End
 ---------------------------------------------------------------------- */
@@ -927,8 +1019,20 @@ form.news-letter .btn:hover{
 
 
 @media screen and (max-width: 768px){
+	.pattern {
+		position: static;
+	}
+	.next-section {
+		position: static;
+	}
 	.section-title{
 		font-size:40px;
+	}
+	.section-style{
+		min-height: initial;
+	}
+	#contact .next-section{
+		margin-top: 70px;
 	}
 	#contact-form #first_name{
 		border-right:1px solid #fff;
@@ -939,8 +1043,14 @@ form.news-letter .btn:hover{
 	#contact-form  #email{
 		border-right:1px solid #fff;
 	}
-		#contact-form  .btn{
+	#contact-form  .btn{
 	border-left:1px solid #fff;
+	}
+	#page-top .pattern {
+		padding-top: 100px;
+	}
+	#page-top .centerize {
+		display: block;
 	}
 }
 
