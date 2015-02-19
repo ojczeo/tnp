@@ -11,6 +11,11 @@ if (aboutImage) {  jQuery('#about').css({ 'background-image':'url(' + aboutImage
 if (musicImage) {  jQuery('#music').css({ 'background-image':'url(' + musicImage + ')' }); };
 if (contactImage) {  jQuery('#contact').css({ 'background-image':'url(' + contactImage + ')' }); };
 
+// var pageTopImageMove = jQuery('#page-top').css('background-image');
+// if (pageTopImageMove) {
+// 	jQuery('#page-top').attr("data-ibg-bg", pageTopImageMove);
+// };
+
 /* Background Images End
 -------------------------------------------------------------------*/
 
@@ -200,7 +205,7 @@ jQuery(document).ready(function($) {
             return false;
         }
 
-        var data_string = $('.contact-form').serialize();
+        var data_string = $('#contact-form').serialize();
 
         $('#contact-submit').hide();
         $('#contact-loading').fadeIn();
@@ -250,5 +255,17 @@ $(window).load(function () {
     $("#loader").fadeOut();
     $("#preloader-container").delay(350).fadeOut("slow");
 });
+// 
+// $(document).ready(function(){
+// 		$(".ibg-bg").interactive_bg(); // function call
+// });
+//
+// 	// change background size on window resize
+// 	$(window).resize(function() {
+// 			$(".ibg-bg").css({
+// 				width: $(window).outerWidth(),
+// 				height: $(window).outerHeight()
+// 			})
+// 	})
  /* Preloder End
 -------------------------------------------------------------------*/

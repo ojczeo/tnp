@@ -126,6 +126,7 @@ a:focus{
 	font-weight:300;
 	text-align:center;
 	line-height:30px;
+	font-size: 1.5em;
 }
 .form-control{
 	padding: 6px 30px;
@@ -341,6 +342,11 @@ a:focus{
 	background:#3498db;
 	color: #fff;
 }
+
+.social-btn-box .more-btn:hover{
+	background:white;
+	color: black;
+}
 /* 2.2 - Social Button
 ------------------------------------------ */
 
@@ -387,6 +393,17 @@ a:focus{
 
 h1.logo-wrapper img {
 	max-width: 100%;
+}
+
+h1.logo-wrapper .caption {
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 20px;
+	letter-spacing: 10px;
+	display: block;
+	line-height: 40px;
+	margin: 0 10%;
 }
 
 .team-member {
@@ -728,6 +745,12 @@ h1.logo-wrapper img {
 	left: 230px;
 }
 
+.team-member .social-btn-container .more-btn-container{
+	top: -110px;
+	left: 78px;
+}
+
+
 .team-member:hover .social-btn-container .facebook-btn-container{
 	bottom: 115px;
 	right: 122px;
@@ -743,6 +766,14 @@ h1.logo-wrapper img {
 .team-member:hover .social-btn-container .github-btn-container{
 	top: 115px;
 	left: 122px;
+}
+.team-member:hover .social-btn-container .soundcloud-btn-container{
+	top: 115px;
+	left: 122px;
+}
+.team-member:hover .social-btn-container .more-btn-container{
+	top: 70px;
+	left: 78px;
 }
 .team-container .social-buttons a{
 	color:#fff;
