@@ -248,7 +248,7 @@ jQuery(document).ready(function($) {
 $(window).load(function () {
     "use strict";
     $("#loader").fadeOut();
-    $("#preloader").delay(350).fadeOut("slow");
+    $("#preloader-container").delay(350).fadeOut("slow");
 });
  /* Preloder End
 -------------------------------------------------------------------*/
