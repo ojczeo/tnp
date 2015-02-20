@@ -291,11 +291,11 @@ a:focus{
 	top:-10px;
 	left:-10px;
 
-	/*-webkit-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
 	   -moz-transform:rotate(-45deg);
 	    -ms-transform:rotate(-45deg);
 	     -o-transform:rotate(-45deg);
-	        transform:rotate(-45deg);*/
+	        transform:rotate(-45deg);
 }
 .social-btn-box,
 .social-btn-box a{
@@ -305,13 +305,6 @@ a:focus{
 	    -ms-transition:all .25s;
 	     -o-transition:all .25s;
 	        transition:all .25s;
-}
-.social-btn-box a i {
-	-webkit-transform:rotate(-45deg);
-		-moz-transform:rotate(-45deg);
-			-ms-transform:rotate(-45deg);
-			-o-transform:rotate(-45deg);
-					transform:rotate(-45deg);
 }
 .social-btn-box:hover{
 	border-color:transparent;
@@ -353,19 +346,6 @@ a:focus{
 .social-btn-box .more-btn:hover{
 	background:white;
 	color: black;
-}
-
-.social-btn-container .social-btn-box.more-btn-container {
-	height: 120px;
-	width: 120px;
-	margin: 30px;
-}
-
-.social-btn-container .social-btn-box.more-btn-container a{
-	height: 140px;
-	width: 140px;
-	line-height: 120px;
-	margin-left: -10px;
 }
 /* 2.2 - Social Button
 ------------------------------------------ */
@@ -765,11 +745,6 @@ h1.logo-wrapper .caption {
 	left: 230px;
 }
 
-.team-member .social-btn-container .soundcloud-btn-container{
-	top: 220px;
-	left: 230px;
-}
-
 .team-member .social-btn-container .more-btn-container{
 	top: -110px;
 	left: 78px;
@@ -785,7 +760,7 @@ h1.logo-wrapper .caption {
 	left: 122px;
 }
 .team-member:hover .social-btn-container .linkedin-btn-container{
-	top: 135px;
+	top: 115px;
 	right: 122px;
 }
 .team-member:hover .social-btn-container .github-btn-container{
@@ -793,12 +768,12 @@ h1.logo-wrapper .caption {
 	left: 122px;
 }
 .team-member:hover .social-btn-container .soundcloud-btn-container{
-	top: 135px;
-	left: 126px;
+	top: 115px;
+	left: 122px;
 }
 .team-member:hover .social-btn-container .more-btn-container{
-	top: 0px;
-	left: 34px;
+	top: 70px;
+	left: 78px;
 }
 .team-container .social-buttons a{
 	color:#fff;
