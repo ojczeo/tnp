@@ -87,7 +87,24 @@ jQuery(document).ready(function($) {
 
     /* Time Countdown End
 	-------------------------------------------------------------------*/
-
+	$(".team-member").each(function(index, member){
+		member = $(member);
+		member.find(".more-btn-container .more-btn").on("click", function(e,t){
+			var target = member.find(".about-team-member");
+			e.preventDefault();
+			if (target) {
+				document.body.style.overflow = 'hidden';
+				$(target).addClass("active");
+			} else {
+				console.log("no content");
+			}
+		});
+		member.find(".about-team-member .close-about").on("click", function(e,t){
+			e.preventDefault();
+			document.body.style.overflow = 'auto';
+			member.find(".about-team-member").removeClass("active");
+		});
+	});
 
 
 
@@ -255,7 +272,7 @@ $(window).load(function () {
     $("#loader").fadeOut();
     $("#preloader-container").delay(350).fadeOut("slow");
 });
-// 
+//
 // $(document).ready(function(){
 // 		$(".ibg-bg").interactive_bg(); // function call
 // });

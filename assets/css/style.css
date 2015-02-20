@@ -236,7 +236,9 @@ a:focus{
 			-o-transform:rotate(45deg);
 					transform:rotate(45deg);
 }
-
+.next-section a.go-to-page-top {
+	margin-bottom: 0;
+}
 /* 2.1 - Next Section
 ------------------------------------------ */
 
@@ -795,6 +797,7 @@ h1.logo-wrapper .caption {
 	        transition:all .25s;
 }
 .team-container .team-member:hover figure{
+	/*background:rgba(0,0,0,.4) url(../images/pattern.png);*/
 	background-color:#1D3D5B;
 	color:#fff;
 }
@@ -1185,4 +1188,80 @@ form.news-letter .btn:hover{
 		box-shadow: 0 -2em #ffffff;
 		height: 5em;
 	}
+}
+.about-team-member{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: white;
+	color: black;
+	z-index: 20;
+	padding: 60px 0;
+	overflow: auto;
+	display: none;
+}
+.about-team-member.active{
+	display: block;
+}
+
+.about-team-member .photo-container {
+	margin: 60px auto;
+}
+.about-team-member .photo-container:before, .about-team-member .photo-container:after {
+	content: "";
+	border-top: 1px solid rgba(0,0,0,.4);
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+}
+.about-team-member .photo {
+	margin: 0 auto;
+	width: 250px;
+	height: 250px;
+	border: 1px solid rgba(0,0,0,.4);
+	overflow: hidden;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.about-team-member .photo img {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	height: 360px;
+	min-width: 100%;
+	margin: -60px 0 0 -60px;
+}
+.about-team-member .section-title {
+	margin: 100px 0 60px 0;
+}
+.about-team-member .section-description {
+	margin-bottom: 100px;
+	font-size: 1.7em;
+}
+.close-about{
+	color: rgba(0,0,0,.4);
+	font-size: 70px;
+	position: absolute;
+	right: 25px;
+	top: 0;
+	cursor: pointer;
+	text-decoration: none;
+	font-family: serif;
+	-webkit-transition:all .25s;
+		-moz-transition:all .25s;
+			-ms-transition:all .25s;
+			-o-transition:all .25s;
+					transition:all .25s;
+}
+.close-about:hover {
+	color: black;
+	text-decoration: none;
 }
