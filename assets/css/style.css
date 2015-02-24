@@ -1197,7 +1197,7 @@ form.news-letter .btn:hover{
 	bottom: 0;
 	background: white;
 	color: black;
-	z-index: 20;
+	z-index: 2000;
 	padding: 60px 0;
 	overflow: auto;
 	display: none;
